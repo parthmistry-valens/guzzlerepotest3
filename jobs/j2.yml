@@ -1,0 +1,19 @@
+version: 1
+job:
+  type: "ingestion"
+source:
+  endpoint: "lo_jdbc_mysql"
+  properties:
+    query: "select * from table1 where country = ${country}"
+schema:
+  strict_schema_check: true
+  schema_derivation_strategy: "source"
+  discard: true
+  columns:
+    - name: id
+    
+target:
+  endpoint: "lo_jdbc_mysql"
+  properties:
+    table: "table2"
+
