@@ -8,7 +8,7 @@ source:
       quote_delimiter: "\""
       escape_char: "\\\\"
       contains_header: true
-    source_file_pattern: "prestaging/users1.csv_t2"
+    source_file_pattern: "prestaging/users1.csv_t1_cc"
 job:
   type: "ingestion"
 reject:
