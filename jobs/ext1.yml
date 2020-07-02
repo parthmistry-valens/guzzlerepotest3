@@ -4,7 +4,7 @@ job:
 config:
   endpoint: "lo_jdbc_mssql"
   properties:
-    script: "df_c1"
+    script: "df_c2"
 lineages:
   source:
   - endpoint: "lo_hive"
