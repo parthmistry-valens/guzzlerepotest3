@@ -1,2 +1,2 @@
-version: 2
-technology: "lfs"
+version: 1 
+technology: "jdbc"
