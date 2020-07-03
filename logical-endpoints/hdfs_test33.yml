@@ -1,2 +1,2 @@
-version: 1
-technology: "file"
+version: 2
+technology: "lfs"
