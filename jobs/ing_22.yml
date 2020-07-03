@@ -11,4 +11,4 @@ source:
       quote_delimiter: "\""
       escape_char: "\\\\"
       contains_header: true
-    source_file_pattern: "abc_c1"
+    source_file_pattern: "abc_c2"
