@@ -1,0 +1,19 @@
+version: 1
+job:
+  type: "processing"
+source:
+  endpoint: "lo_delta"
+  properties:
+    table: "test"
+  incremental: false
+target:
+  endpoint: "lo_delta"
+  operation: "append"
+  soft_delete: false
+  properties:
+    table: "test2"
+  truncate_partition_columns:
+  - name: "test"
+    value: "a"
+  - name: "b"
+    value: "d"

@@ -1,0 +1,10 @@
+version: 1
+description: ""
+parallel: 12
+properties:
+  auto_dependency: false
+jobs:
+- ra23:
+    job_parameters:
+      param_check: "[IKEASEA\\$Transaction Header]"
+folder: "/pf2"

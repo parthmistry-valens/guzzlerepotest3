@@ -1,0 +1,12 @@
+version: 1
+job:
+  type: "processing"
+source:
+  endpoint: "lo_hive"
+  properties:
+    table: "aa12"
+  incremental: false
+target:
+  endpoint: "lo_hive"
+  operation: "append"
+  soft_delete: false

@@ -1,0 +1,34 @@
+version: 1
+job:
+  type: "ingestion"
+source:
+  endpoint: "rd1"
+  properties:
+    source_file_pattern: "test-column-case.json"
+    format: "json"
+    charset: "UTF-8"
+    partial_load: false
+    format_properties:
+      clean_column_name: false
+      multiline: false
+  column_mapping:
+    ID: "Id2"
+    name: "name_new"
+schema:
+  schema_derivation_strategy: "source"
+  strict_schema_check: true
+  discard: true
+target:
+  endpoint: "rd1"
+  properties:
+    format: "delimited"
+    charset: "UTF-8"
+    path: "check"
+    preserve_hierarchy: false
+    format_properties:
+      column_delimiter: ","
+      quote_delimiter: "\""
+      escape_char: "\\\\"
+      contains_header: true
+      merge_file: true
+      trim_white_space: "none"

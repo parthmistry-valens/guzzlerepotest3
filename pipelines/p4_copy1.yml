@@ -1,0 +1,7 @@
+version: 1
+description: ""
+parallel: 12
+properties:
+  auto_dependency: false
+jobs: []
+folder: "/pf1"

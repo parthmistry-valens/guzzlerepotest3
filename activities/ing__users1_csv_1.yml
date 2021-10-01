@@ -1,0 +1,109 @@
+version: 1
+job:
+  type: "ingestion"
+source:
+  endpoint: "rd1"
+  properties:
+    source_file_pattern: "/users1.csv"
+    format: "delimited"
+    charset: "UTF-8"
+    partial_load: false
+    format_properties:
+      column_delimiter: ","
+      quote_delimiter: "\""
+      escape_char: "\\\\"
+      contains_header: true
+      infer_schema: false
+      clean_column_name: false
+      trim_white_space: "none"
+schema:
+  schema_derivation_strategy: "source"
+  strict_schema_check: true
+  discard: true
+  columns:
+  - name: "id"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "first_name"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "last_name"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "gender"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "age"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "email"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "ip_address"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "created_time"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "src_filename"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "src_fullfilepath"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "src_fulldirname"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+  - name: "src_reldirname"
+    data_type:
+      value: "string"
+      validate: false
+    nullable:
+      value: true
+target:
+  endpoint: "rd1"
+  properties:
+    format: "delimited"
+    charset: "UTF-8"
+    path: "_users1_csv"
+    preserve_hierarchy: false
+    format_properties:
+      column_delimiter: ","
+      quote_delimiter: "\""
+      escape_char: "\\\\"
+      contains_header: true
+      merge_file: false
+      trim_white_space: "none"

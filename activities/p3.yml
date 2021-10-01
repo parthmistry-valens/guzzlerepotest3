@@ -1,0 +1,17 @@
+version: 1
+job:
+  type: "processing"
+source:
+  endpoint: "lo_delta"
+  properties:
+    table: "est"
+  incremental: false
+  additional_columns:
+  - name: "test"
+    value: "a"
+target:
+  endpoint: "j1"
+  operation: "append"
+  soft_delete: false
+  properties:
+    template: "default"

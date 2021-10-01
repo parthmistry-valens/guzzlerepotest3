@@ -1,0 +1,18 @@
+version: 1
+job:
+  type: "recon"
+source:
+  endpoint: "lo_jdbc"
+  properties:
+    table: "test"
+target:
+  endpoint: "lo_delta"
+  properties:
+    table: "test2"
+recon:
+  primary_keys:
+  - "id1"
+  recon_metrics:
+    a:
+      source_aggregation: "count(a)"
+      target_aggregation: "count(b)"
